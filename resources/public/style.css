@@ -1,0 +1,210 @@
+.hide {
+  display: none;
+}
+
+*, *:after, *:before {
+  -moz-transition:all 500ms;
+}
+
+body {
+  font-family:"BebasNeueRegular", times, sans-serif;
+}
+
+.clear {
+  clear:both;
+  float:none;
+}
+
+
+#main {
+  padding:20px;
+}
+
+.end {
+  font-size:30px;
+  margin-bottom:20px;
+}
+
+
+.answer {
+  margin:10px 0;
+  margin-left:-5px;
+  padding-left:5px;
+  padding-top:2px;
+  font-size:20px;
+}
+
+.answer:hover {
+    background:#eee;
+
+}
+
+input.correct:checked + .answer {
+  background:#0f0;
+}
+
+#score {
+  width:0%;
+  background:#25a500;
+  height:20px;
+  position:fixed;
+  left:0;
+  padding:10px;
+  right:0;
+  color:#fff;
+}
+
+.question2, .question3, .question4, .question5, .end {
+  display: none;
+}
+
+.question1 {
+  display:block;
+}
+
+.question1[type='checkbox']:checked ~ .question1 {
+  display:none;
+}
+
+
+.question1[type='checkbox']:checked ~ .question2 {
+  display:block;
+}
+
+.question2[type='checkbox']:checked ~ .question2 {
+  display:none;
+}
+
+.question2[type='checkbox']:checked ~ .question3 {
+  display:block;
+}
+
+.question3[type='checkbox']:checked ~ .question3 {
+  display:none;
+}
+
+.question3[type='checkbox']:checked ~ .question4 {
+  display:block;
+}
+
+.question4[type='checkbox']:checked ~ .question4 {
+  display:none;
+}
+
+.question4[type='checkbox']:checked ~ .question5 {
+  display:block;
+}
+
+.question5[type='checkbox']:checked ~ .question5 {
+  display:none;
+}
+
+.question5[type='checkbox']:checked ~ .end {
+  display:block;
+}
+
+input[type="checkbox"] {
+  display:none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#score:before {
+  display: block;
+  content: "0/0";
+  padding-left:20px;
+  font-size:20px;
+}
+
+#score:after {
+  width:0%;
+  background:#a60303;
+  height:20px;
+  position:fixed;
+  left:0%;
+  padding:10px 0 ;
+  margin-top:-34px;
+  color:#fff;
+  display: block;
+  content: " ";
+}
+
+
+input:not(.correct):checked ~ #score:after {
+  width:20%;
+}
+input:not(.correct):checked ~ input:not(.correct):checked ~ #score:after {
+  width:40%;
+}
+input:not(.correct):checked ~ input:not(.correct):checked ~ input:not(.correct):checked ~ #score:after {
+  width:60%;
+}
+input:not(.correct):checked ~ input:not(.correct):checked ~ input:not(.correct):checked ~ input:not(.correct):checked ~ #score:after {
+  width:80%;
+}
+input:not(.correct):checked ~ input:not(.correct):checked ~ input:not(.correct):checked ~ input:not(.correct):checked ~ input:not(.correct):checked ~ #score:after {
+  width:100%;
+}
+
+
+
+input.correct:checked ~ #score {
+  width:20%;
+}
+input.correct:checked ~ #score:after {
+  left:20%;
+}
+input.correct:checked ~ #score:before {
+  content:"1/5";
+}
+
+input.correct:checked ~ input.correct:checked ~ #score {
+  width:40%;
+}
+input.correct:checked ~ input.correct:checked ~ #score:after {
+  left:40%;
+}
+input.correct:checked ~ input.correct:checked ~ #score:before {
+  content:"2/5";
+}
+
+input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ #score {
+  width:60%;
+}
+input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ #score:after {
+  left:60%;
+}
+
+input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ #score:before {
+  content:"3/5";
+}
+
+input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ #score {
+  width:80%;
+}
+input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ #score:after {
+  left:80%;
+}
+
+input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ #score:before {
+  content:"4/5";
+}
+
+input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ #score {
+  width:100%;
+}
+input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ #score:after {
+  left:100%;
+}
+input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ input.correct:checked ~ #score:before {
+  content:"5/5";
+}
