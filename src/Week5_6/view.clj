@@ -66,7 +66,7 @@
 (defpage [:post "/result"] {:as quiz} []
     (layout
      (if(form-filled? (:group1 quiz) (:group2 quiz) (:group3 quiz) (:group4 quiz))
-       (:h1 "Vul alles in!")
+       [:h1 "Vul alles in!"]
        [:div
         [:h3 "Antwoord vraag 1: " (:group1 quiz) (if(= (:group1 quiz) (get-in questions [0 :antwoord])) (image "/img/accept.png") (image "/img/decline.png"))]
         [:h3 "Antwoord vraag 2: " (:group2 quiz) (if(= (:group2 quiz) (get-in questions [1 :antwoord])) (image "/img/accept.png") (image "/img/decline.png"))]
